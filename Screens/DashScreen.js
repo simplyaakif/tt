@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Text, View, StyleSheet, StatusBar, ScrollView} from "react-native";
 import colors from '../Config/Styles/Colors';
 import ArPackage from "../Components/Ar_Package";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
+import AuthContext from "../auth/context";
 
 const DashScreen = () => {
+    const {user} = useContext(AuthContext)
     return (
 
         <ScrollView style={styles.container}>
@@ -22,7 +24,7 @@ const DashScreen = () => {
                         Welcome back,
                     </Text>
                 </View>
-                <Text style={styles.name}>Muhmmad Aakif Raza</Text>
+                <Text style={styles.name}>{user.user.name}</Text>
             </View>
             <View style={{padding: 10, top: -60,}}>
                 <View style={{

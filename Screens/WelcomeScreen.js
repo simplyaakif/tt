@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, Text, StatusBar, Image} from 'react-native';
 import ArButton from "../Components/Ar_Button";
+import colors from "../Config/Styles/Colors";
+
 
 const WelcomeScreen = ({navigation}) => {
     return (
